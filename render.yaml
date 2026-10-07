@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: peacecollection
+    runtime: docker
+    plan: starter
+    healthCheckPath: /healthz
+    autoDeploy: true
+    disk:
+      name: peacecollection-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PEACECOLLECTION_ADMIN_PASSWORD
+        sync: false
+      - key: PEACECOLLECTION_HOST
+        value: 0.0.0.0
+      - key: PEACECOLLECTION_DATA_DIR
+        value: /var/data
+      - key: PEACECOLLECTION_SECURE_COOKIES
+        value: "true"

@@ -1,0 +1,16 @@
+.git
+.idea
+.vscode
+out
+src/out
+src/.idea
+src/eclipseIDEJAVAPROGRAM.iml
+peacecollection-data
+cookies.txt
+*.lnk
+web/images/dark-model-three.jpg
+web/images/dark-model-two.jpg
+web/images/dera-kaftan-blue.jpg
+web/images/dera-kaftan-red.jpg
+web/images/pexels-kaftan.jpg
+web/images/pexels-print-dress.jpg
