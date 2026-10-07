@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Owner Admin — PeaceCollection</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a class="admin-brand" href="/">PEACECOLLECTION <span>OWNER PANEL</span></a>
+    <a href="/">View storefront ↗</a>
+  </header>
+  <main class="admin-main">
+    <section id="login-panel" class="panel login-panel">
+      <p class="eyebrow">Private owner access</p>
+      <h1>Welcome back.</h1>
+      <p>Sign in to manage your PeaceCollection storefront.</p>
+      <form id="login-form">
+        <label for="admin-password">Owner password</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="primary-button" type="submit">Sign in</button>
+        <p id="login-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" hidden>
+      <div class="dashboard-heading">
+        <div><p class="eyebrow">PeaceCollection · Owner tools</p><h1>Your storefront.</h1></div>
+        <button id="logout-button" class="quiet-button" type="button">Sign out</button>
+      </div>
+      <nav class="tabs" aria-label="Admin sections">
+        <button class="tab active" type="button" data-section="catalog-panel">Products</button>
+        <button class="tab" type="button" data-section="content-panel">Homepage</button>
+        <button class="tab" type="button" data-section="requests-panel">Styling requests <span id="request-count"></span></button>
+      </nav>
+
+      <section id="catalog-panel" class="admin-section panel">
+        <div class="section-heading"><div><h2>Product catalogue</h2><p>Add looks, change prices, or remove products from the shop.</p></div></div>
+        <form id="product-form" class="product-form">
+          <input type="hidden" name="id">
+          <label>Product name<input name="name" maxlength="80" required></label>
+          <label>Description<input name="description" maxlength="140" required></label>
+          <label>Price (USD)<input name="price" type="number" min="0" max="999999" step="0.01" required></label>
+          <label>Colour
+            <select name="colour" required>
+              <option value="black">Black</option><option value="brown">Brown</option>
+              <option value="dark-yellow">Dark yellow</option><option value="dark-pink">Dark pink</option>
+              <option value="white">White</option>
+            </select>
+          </label>
+          <label>Styles (Ctrl/Cmd-click to choose more than one)
+            <select id="product-style" multiple size="5" required>
+              <option value="kaftan">Kaftan</option><option value="print">African print</option>
+              <option value="embroidered">Embroidered</option><option value="backless">Backless Dera</option>
+              <option value="elegance">Elegance Dera</option>
+              <option value="boubou">Boubou</option><option value="wrap">Wrap Dera</option>
+              <option value="maxi">Maxi Dera</option><option value="flare">Flare sleeve</option>
+              <option value="occasion">Occasion wear</option>
+              <option value="mixed">Mixed colours</option>
+            </select>
+          </label>
+          <input type="hidden" name="image" value="texture-african.jpg">
+          <p class="field-hint">The shop displays a garment-only illustration based on each product’s selected style and colour.</p>
+          <div class="form-actions"><button class="primary-button" type="submit">Save product</button><button id="cancel-edit" class="quiet-button" type="button" hidden>Cancel edit</button></div>
+          <p id="product-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+        <div id="product-list" class="admin-list"></div>
+      </section>
+
+      <section id="content-panel" class="admin-section panel" hidden>
+        <div class="section-heading"><div><h2>Homepage words</h2><p>Update the announcement, welcome copy and story text shown to visitors.</p></div></div>
+        <form id="content-form" class="content-form">
+          <label>Announcement bar<input name="announcement" maxlength="180" required></label>
+          <label>Welcome description<textarea name="heroDescription" rows="3" maxlength="500" required></textarea></label>
+          <label>Our story — first paragraph<textarea name="storyFirst" rows="3" maxlength="500" required></textarea></label>
+          <label>Our story — second paragraph<textarea name="storySecond" rows="3" maxlength="500" required></textarea></label>
+          <button class="primary-button" type="submit">Save homepage text</button>
+          <p id="content-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="requests-panel" class="admin-section panel" hidden>
+        <div class="section-heading"><div><h2>Styling requests</h2><p>Customer messages are private and only visible after owner sign-in.</p></div><button id="refresh-requests" class="quiet-button" type="button">Refresh</button></div>
+        <div id="request-list" class="admin-list"></div>
+      </section>
+      <p id="dashboard-status" class="status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="garment-art.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

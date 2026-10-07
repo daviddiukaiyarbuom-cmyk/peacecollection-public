@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Discover women's Dera fashion in black, brown, dark yellow, dark pink and white at PeaceCollection by Botigou Dera Fashions.">
+  <link rel="canonical" href="__PEACECOLLECTION_PUBLIC_URL__/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PeaceCollection — Botigou Dera Fashions">
+  <meta property="og:description" content="Explore colourful Dera fashion, African prints and elegant kaftans at PeaceCollection.">
+  <meta property="og:url" content="__PEACECOLLECTION_PUBLIC_URL__/">
+  <meta name="twitter:card" content="summary">
+  <title>PeaceCollection — Botigou Dera Fashions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="announcement-copy" class="announcement">A little colour goes a long way ✳ Find your feel-good fit</div>
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="PeaceCollection — Botigou Dera Fashions home">
+      <span class="logo-mark">BD</span>
+      <span class="logo-name">PEACECOLLECTION <small>BOTIGOU DERA FASHIONS</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu <span>☰</span></button>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop the edit</a>
+      <a href="#story">Our story</a>
+      <a href="#custom">Get styled</a>
+    </nav>
+    <a class="bag" href="#custom">Your bag <span id="bag-count" aria-live="polite">0</span></a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A boutique for every version of you</p>
+        <h1>Wear your<br>own kind of <i>wonder.</i></h1>
+        <p id="hero-description" class="hero-description">Feel-good fashion, made for wherever the day takes you. Find the colour, cut and little detail that feels like you.</p>
+        <a class="button button-dark" href="#shop">Find your look <span aria-hidden="true">↗</span></a>
+        <div class="hero-footnote"><span>✳</span> Easy pieces. Main-character energy.</div>
+      </div>
+      <div class="hero-art">
+        <div id="hero-garment" aria-label="Photographic Dera fabric displayed on a faceless mannequin"></div>
+        <span class="art-caption">GOOD MOOD<br>LOOKS GOOD ON YOU</span>
+        <span class="art-sticker">STYLE<br>YOUR<br>STORY</span>
+      </div>
+      <a class="scroll-cue" href="#shop">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <section id="shop" class="shop section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The feel-good edit</p>
+          <h2>Pick your <i>mood.</i></h2>
+        </div>
+        <p>Explore garment-only Dera designs in your favourite colours, with no models in the pictures.</p>
+      </div>
+      <div class="filters">
+        <div class="style-filters" role="group" aria-label="Filter by style">
+          <button class="filter active" type="button" data-style="all" aria-pressed="true">All Dera</button>
+          <button class="filter" type="button" data-style="kaftan" aria-pressed="false">Kaftans</button>
+          <button class="filter" type="button" data-style="print" aria-pressed="false">African prints</button>
+          <button class="filter" type="button" data-style="embroidered" aria-pressed="false">Embroidered</button>
+          <button class="filter" type="button" data-style="backless" aria-pressed="false">Backless Dera</button>
+          <button class="filter" type="button" data-style="elegance" aria-pressed="false">Elegance Dera</button>
+          <button class="filter" type="button" data-style="boubou" aria-pressed="false">Boubou</button>
+          <button class="filter" type="button" data-style="wrap" aria-pressed="false">Wrap Dera</button>
+          <button class="filter" type="button" data-style="maxi" aria-pressed="false">Maxi Dera</button>
+          <button class="filter" type="button" data-style="flare" aria-pressed="false">Flare sleeve</button>
+          <button class="filter" type="button" data-style="occasion" aria-pressed="false">Occasion wear</button>
+          <button class="filter" type="button" data-style="mixed" aria-pressed="false">Mixed colours</button>
+        </div>
+        <label class="colour-filter">Colour
+          <select id="colour-filter" aria-label="Filter by colour">
+            <option value="all">All colours</option>
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="dark-yellow">Dark yellow</option>
+            <option value="dark-pink">Dark pink</option>
+            <option value="white">White</option>
+          </select>
+        </label>
+      </div>
+      <p id="results-status" class="results-status" aria-live="polite"></p>
+      <div id="products" class="products" aria-live="polite"></div>
+      <p id="empty-results" class="empty-results" hidden>No looks in that colour and style just yet. Try another filter.</p>
+    </section>
+
+    <section class="style-note">
+      <span class="style-note-sparkle">✳</span>
+      <p>Wear what makes you <i>feel like you.</i></p>
+      <a href="#custom">We’ll help you find it <span>↗</span></a>
+    </section>
+
+    <section id="custom" class="custom section">
+      <div class="custom-intro">
+        <p class="eyebrow">A little help from your stylist</p>
+        <h2>Your look.<br><i>Your rules.</i></h2>
+        <p>Found a favourite? Tell us what you love and we’ll get back to you with personal styling help. No pressure, just good outfits.</p>
+        <div class="custom-badge">MADE FOR<br>YOUR MOOD <span>♥</span></div>
+      </div>
+      <form id="order-form" class="order-form">
+        <label for="customer">Your name</label>
+        <input id="customer" name="customer" autocomplete="name" required maxlength="100" placeholder="Your name">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+        <label for="items">What are you looking for?</label>
+        <textarea id="items" name="items" rows="3" required maxlength="2000" placeholder="Add a look from the edit, or tell us your style..."></textarea>
+        <label for="finish">What would you love?</label>
+        <select id="finish" name="finish">
+          <option>Help me pick an outfit</option>
+          <option>Ask about a piece</option>
+          <option>Personal styling session</option>
+          <option>Colour and fit advice</option>
+        </select>
+        <button class="button button-light" type="submit">Send my styling request <span aria-hidden="true">↗</span></button>
+        <p id="order-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="story" class="story section">
+      <div class="story-art"><span>Be<br>your <i>own</i><br>muse.</span><b>✿</b></div>
+      <div class="story-copy">
+        <p class="eyebrow">A note from Botigou Dera</p>
+        <h2>Getting dressed should feel <i>good.</i></h2>
+        <p id="story-first">We’re here for the outfit that lifts your mood, the colour you can’t stop thinking about, and the confidence that comes from showing up as yourself.</p>
+        <p id="story-second">Explore pieces to mix, match and make your own. Your style is the story — we’re just happy to be a part of it.</p>
+        <a class="text-link" href="#shop">Find your next favourite <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="#home">PEACECOLLECTION <span>BY BOTIGOU DERA FASHIONS</span></a><span>Dress like you mean it. © 2026</span><a href="/admin">Owner sign in</a><a href="#home">Back to top ↑</a></footer>
+  <script src="garment-art.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
